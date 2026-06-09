@@ -1,0 +1,16 @@
+{
+  "name": "vehicle-maintenance-scheduler",
+  "version": "1.0.0",
+  "description": "Vehicle maintenance scheduler API integration layer.",
+  "main": "src/index.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "node -e \"process.env.DEPOT_API_BASE_URL='http://localhost';process.env.DEPOT_API_TOKEN='test';process.env.VEHICLE_API_BASE_URL='http://localhost';process.env.VEHICLE_API_TOKEN='test';const {optimizeTasks}=require('./src');const r=optimizeTasks([{taskId:'T1',duration:2,impact:10},{taskId:'T2',duration:3,impact:14},{taskId:'T3',duration:4,impact:16}],5);if(r.totalImpact!==24)throw new Error('bad optimization');console.log('scheduler ok');\""
+  },
+  "dependencies": {
+    "axios": "^1.7.9",
+    "dotenv": "^16.4.7",
+    "express": "^4.18.3"
+  },
+  "license": "MIT"
+}

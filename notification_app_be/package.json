@@ -1,0 +1,15 @@
+{
+  "name": "notification-app-be",
+  "version": "1.0.0",
+  "description": "Notification backend service.",
+  "main": "src/app.js",
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "node -e \"const app=require('./src/app'); if(!app || !app.use) throw new Error('app failed'); console.log('notification api ok');\""
+  },
+  "dependencies": {
+    "dotenv": "^16.4.7",
+    "express": "^4.18.3"
+  },
+  "license": "MIT"
+}

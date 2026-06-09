@@ -1,0 +1,16 @@
+{
+  "name": "logging-middleware",
+  "version": "1.0.0",
+  "description": "Reusable Express-compatible logging middleware for backend services.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "node -e \"const logger = require('./src'); logger.createServiceLogger('test').info('logger loaded');\""
+  },
+  "keywords": [
+    "logging",
+    "express",
+    "middleware"
+  ],
+  "author": "",
+  "license": "MIT"
+}
